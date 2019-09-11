@@ -164,3 +164,65 @@ body {
   width: 16vmin;
   text-align: center;
 }
+
+.m-icon:hover {
+  cursor: pointer;
+}
+
+.e-icon {
+  margin: 1rem;
+  margin-bottom: 2rem;
+  width: 16vmin;
+  text-align: center;
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal-body {
+  flex: 1;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 1px solid black;
+}
+
+.theme-body {
+  flex: 1;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 1px solid black;
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+.middle-area h1 {
+  margin: 0;
+  font-size: 1em;
+}
+
+.time-h1 {
+  margin: 0;
+  font-size: 1em;
+  padding-top: 0.1em;
+}
+
+.fscreen-btn {
+  border-right: 1px solid black;
+}
+
+#email-img {
+  width: 12vmin;
+}

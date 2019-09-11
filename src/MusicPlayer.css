@@ -33,12 +33,13 @@
   left: 0;
 }
 
-/* .media-controls > time:nth-of-type(1) {
-  display: block;
-} */
+.media-controls > p {
+  padding: 2vmin;
+}
 
-.media-controls > button {
-  display: block;
+.media-controls button {
+  display: inline-block;
+  padding-left: 2vmin;
 }
 
 .media-controls > input {

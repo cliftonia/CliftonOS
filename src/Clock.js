@@ -36,7 +36,7 @@ class Clock extends React.Component {
     const { time } = this.state;
     return (
       <div className="popup">
-        <div>{time ? time : ""}</div>
+        <h1 className="time-h1">{time ? time : ""}</h1>
       </div>
     );
   }

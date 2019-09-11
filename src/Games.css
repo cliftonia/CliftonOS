@@ -24,3 +24,7 @@
 .g-icons > p {
   font-size: 1.5vmin;
 }
+
+#g-image-icon {
+  width: 9vmin;
+}

@@ -27,20 +27,22 @@ class MusicPlayer2 extends React.Component {
           onRequestClose={this.closeModal}
           isOpen={this.state.modalIsOpen}
         >
-          <div className="a-header">
-            <button onClick={this.closeModal}>X</button>
-            <h3>MusicPlayer</h3>
-          </div>
-          <div className="m-body">
-            <ReactPlayer
-              url="https://www.youtube.com/watch?v=IR2hV-CsFoI&list=PLChZlyInWJLDqZ9-amKjalx8jtMfJjt5u"
-              playing
-              muted
-              width="100%"
-              height="100%"
-            />
-            <h3 className="track-info">Track info: Cliftonia - Who Dis</h3>
-            <MediaPlayer />
+          <div className="modal-wrapper">
+            <div className="a-header">
+              <button onClick={this.closeModal}>X</button>
+              <h3>MusicPlayer</h3>
+            </div>
+            <div className="modal-body">
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=IR2hV-CsFoI&list=PLChZlyInWJLDqZ9-amKjalx8jtMfJjt5u"
+                playing
+                muted
+                width="100%"
+                height="50%"
+              />
+              <h3 className="track-info">Track info: Cliftonia - Who Dis</h3>
+              <MediaPlayer />
+            </div>
           </div>
         </ReactModal>
       </div>

@@ -27,6 +27,16 @@ button {
   outline: inherit;
 }
 
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:active {
+  background-color: black;
+  color: white;
+}
+
 .a-header,
 .t-header {
   display: flex;
@@ -68,7 +78,7 @@ button {
 }
 .t-btn > button {
   padding: 1em;
-  margin-left: 15em;
+  margin-left: 10em;
 }
 
 .unselected-selected {
@@ -100,4 +110,8 @@ button {
 .about-body {
   background-color: white;
   border-top: black solid 1px;
+}
+
+.about-img {
+  padding: 1em;
 }

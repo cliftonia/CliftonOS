@@ -17,7 +17,7 @@ class Socials extends React.Component {
         <div className="g-wrapper">
           <div className="m-icon" onClick={this.openModal}>
             <img src="notepad.png" alt="" />
-            <p style={this.props.handleFontColor()}>Readme</p>
+            <p style={this.props.handleFontColor()}>Readme.txt</p>
           </div>
           <ReactModal
             initWidth={400}
@@ -25,12 +25,14 @@ class Socials extends React.Component {
             onRequestClose={this.closeModal}
             isOpen={this.state.modalIsOpen}
           >
-            <div className="a-header">
-              <button onClick={this.closeModal}>X</button>
-              <h3>Socials</h3>
-            </div>
-            <div className="s-area">
-              <h1>Hello</h1>
+            <div className="modal-wrapper">
+              <div className="a-header">
+                <button onClick={this.closeModal}>X</button>
+                <h3>Socials</h3>
+              </div>
+              <div className="modal-body">
+                <h1>Hello</h1>
+              </div>
             </div>
           </ReactModal>
         </div>

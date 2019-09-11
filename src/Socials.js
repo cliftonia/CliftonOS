@@ -25,30 +25,32 @@ class Socials extends React.Component {
             onRequestClose={this.closeModal}
             isOpen={this.state.modalIsOpen}
           >
-            <div className="a-header">
-              <button onClick={this.closeModal}>X</button>
-              <h3>Socials</h3>
-            </div>
-            <div className="s-area">
-              <div className="s-icons">
-                <a
-                  href="https://github.com/cliftonia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="github.jpg" alt="" />
-                  <p>Github</p>
-                </a>
+            <div className="modal-wrapper">
+              <div className="a-header">
+                <button onClick={this.closeModal}>X</button>
+                <h3>Socials</h3>
               </div>
-              <div className="s-icons">
-                <a
-                  href="https://www.linkedin.com/in/cliftonbaggerman/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="linkedin.jpg" alt="" />
-                  <p>LinkedIn</p>
-                </a>
+              <div className="modal-body">
+                <div className="s-icons">
+                  <a
+                    href="https://github.com/cliftonia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="github.jpg" alt="" />
+                    <p>Github</p>
+                  </a>
+                </div>
+                <div className="s-icons">
+                  <a
+                    href="https://www.linkedin.com/in/cliftonbaggerman/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="linkedin.jpg" alt="" />
+                    <p>LinkedIn</p>
+                  </a>
+                </div>
               </div>
             </div>
           </ReactModal>

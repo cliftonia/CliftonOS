@@ -11,6 +11,7 @@ import Socials from "./Socials";
 import Clock from "./Clock";
 import CrudApps from "./CrudApps";
 import Readme from "./Readme";
+import Email from "./Email";
 
 class App extends React.Component {
   state = {
@@ -62,49 +63,60 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        className="App"
-        style={{ backgroundImage: `url(${this.state.bgUrl})` }}
+      <Fullscreen
+        enabled={this.state.isFull}
+        onChange={isFull => this.setState({ isFull })}
       >
-        <div className="header">
-          <div className="left-area">
-            <AboutModal />
-            <ThemeModal
-              highlight={this.handleClick}
-              themes={this.state.themes}
-              changeBackground={this.handleButton}
-            />
+        <div
+          className="App"
+          style={{ backgroundImage: `url(${this.state.bgUrl})` }}
+        >
+          <div className="header">
+            <div className="left-area">
+              <AboutModal />
+              <ThemeModal
+                highlight={this.handleClick}
+                themes={this.state.themes}
+                changeBackground={this.handleButton}
+              />
+            </div>
+            <div className="middle-area">
+              <h1>Clifton OS</h1>
+            </div>
+            <div className="right-area">
+              <button className="fscreen-btn" onClick={this.goFull}>
+                Fullscreen
+              </button>
+
+              <Clock />
+            </div>
           </div>
-          <div className="right-area">
-            <button onClick={this.goFull}>Fullscreen</button>
-            <Fullscreen
-              enabled={this.state.isFull}
-              onChange={isFull => this.setState({ isFull })}
-            ></Fullscreen>
-            <Clock />
-          </div>
+          <Games
+            handleFontColor={this.handleFontColor}
+            themes={this.state.themes}
+          />
+          <Socials
+            handleFontColor={this.handleFontColor}
+            themes={this.state.themes}
+          />
+          <MusicPlayer
+            handleFontColor={this.handleFontColor}
+            themes={this.state.themes}
+          />
+          <CrudApps
+            handleFontColor={this.handleFontColor}
+            themes={this.state.themes}
+          />
+          <Readme
+            handleFontColor={this.handleFontColor}
+            themes={this.state.themes}
+          />
+          <Email
+            handleFontColor={this.handleFontColor}
+            themes={this.state.themes}
+          />
         </div>
-        <Games
-          handleFontColor={this.handleFontColor}
-          themes={this.state.themes}
-        />
-        <Socials
-          handleFontColor={this.handleFontColor}
-          themes={this.state.themes}
-        />
-        <MusicPlayer
-          handleFontColor={this.handleFontColor}
-          themes={this.state.themes}
-        />
-        <CrudApps
-          handleFontColor={this.handleFontColor}
-          themes={this.state.themes}
-        />
-        <Readme
-          handleFontColor={this.handleFontColor}
-          themes={this.state.themes}
-        />
-      </div>
+      </Fullscreen>
     );
   }
 }

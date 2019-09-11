@@ -17,21 +17,30 @@ class Modal extends React.Component {
       <div>
         <button onClick={this.openModal}>About</button>
         <ReactModal
-          initWidth={400}
-          initHeight={400}
+          initWidth={700}
+          initHeight={700}
+          disableResize
           onRequestClose={this.closeModal}
           isOpen={this.state.modalIsOpen}
         >
-          <div className="a-header">
-            <button onClick={this.closeModal}>X</button>
-            <h3>About</h3>
-          </div>
-          <img src="clifton.gif" alt="" />
-          <div className="about-body">
-            <p>
-              Welcome to my portfolio page, feel free to explore the
-              applications that I have created.
-            </p>
+          <div className="modal-wrapper">
+            <div className="a-header">
+              <button onClick={this.closeModal}>X</button>
+              <h3>About</h3>
+            </div>
+            <img className="about-img" src="clifton.gif" alt="" />
+            <div className="modal-body">
+              <p>
+                Welcome to my portfolio page, feel free to explore the
+                applications that I have created.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                perspiciatis voluptates deleniti numquam veritatis. Dolorum,
+                illum impedit facere sed veritatis commodi aspernatur ipsa quod,
+                molestiae omnis ad culpa eum deserunt?
+              </p>
+            </div>
           </div>
         </ReactModal>
       </div>

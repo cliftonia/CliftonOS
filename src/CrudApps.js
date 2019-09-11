@@ -26,30 +26,32 @@ class CrudApps extends React.Component {
             onRequestClose={this.closeModal}
             isOpen={this.state.modalIsOpen}
           >
-            <div className="a-header">
-              <button onClick={this.closeModal}>X</button>
-              <h3>Crud Apps</h3>
-            </div>
-            <div className="c-area">
-              <div className="c-icons">
-                <a
-                  href="https://produce-ex.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img className="c-img" src="strawberry.png" alt="" />
-                  <p>Produce Exchange</p>
-                </a>
+            <div className="modal-wrapper">
+              <div className="a-header">
+                <button onClick={this.closeModal}>X</button>
+                <h3>Crud Apps</h3>
               </div>
-              <div className="c-icons">
-                <a
-                  href="https://whatsthat-webapp.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img className="c-img" src="whatsthat.png" alt="" />
-                  <p>Whats That</p>
-                </a>
+              <div className="modal-body">
+                <div className="c-icons">
+                  <a
+                    href="https://produce-ex.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img className="c-img" src="strawberry.png" alt="" />
+                    <p>Produce Exchange</p>
+                  </a>
+                </div>
+                <div className="c-icons">
+                  <a
+                    href="https://whatsthat-webapp.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img className="c-img" src="whatsthat.png" alt="" />
+                    <p>Whats That</p>
+                  </a>
+                </div>
               </div>
             </div>
           </ReactModal>

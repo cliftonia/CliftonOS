@@ -22,37 +22,36 @@ class ThemeModal extends React.Component {
         <ReactModal
           initWidth={400}
           initHeight={400}
+          disableResize
           onRequestClose={this.closeModal}
           isOpen={this.state.modalIsOpen}
         >
-          <div className="modal-wrapper">
-            <div className="t-header">
-              <button onClick={this.closeModal}>X</button>
-              <h3>Themes</h3>
+          <div className="t-header">
+            <button onClick={this.closeModal}>X</button>
+            <h3>Themes</h3>
+          </div>
+          <div className="t-body">
+            <img
+              className="theme-image"
+              src="201B40_00H-IMS-en_SG.jpg"
+              alt=""
+            />
+            <p>choose desktop theme</p>
+          </div>
+          <div className="t-i-b-w">
+            <div className="t-inner-body">
+              {this.props.themes.map((theme, index) => (
+                <p
+                  onClick={() => this.props.highlight(index)}
+                  className={theme.clicked ? `unselected-selected` : ``}
+                >
+                  {theme.name}
+                </p>
+              ))}
             </div>
-            <div className="t-body">
-              <img
-                className="theme-image"
-                src="./201B40_00H-IMS-en_SG.jpg"
-                alt=""
-              />
-              <p>choose desktop theme</p>
-            </div>
-            <div className="t-i-b-w">
-              <div className="t-inner-body">
-                {this.props.themes.map((theme, index) => (
-                  <p
-                    onClick={() => this.props.highlight(index)}
-                    className={theme.clicked ? `unselected-selected` : ``}
-                  >
-                    {theme.name}
-                  </p>
-                ))}
-              </div>
-            </div>
-            <div className="t-btn">
-              <button onClick={this.props.changeBackground}>Apply</button>
-            </div>
+          </div>
+          <div className="t-btn">
+            <button onClick={this.props.changeBackground}>Apply</button>
           </div>
         </ReactModal>
       </div>
