@@ -1,0 +1,30 @@
+.folder-image {
+  width: 7vmin;
+}
+
+.socials-wrapper {
+  text-align: left;
+}
+
+.s-area {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 25%;
+  height: 84%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.s-icons {
+  width: 5vmin;
+  padding: 1vmin;
+  text-align: center;
+}
+
+.s-icons > p {
+  font-size: 1.5vmin;
+}

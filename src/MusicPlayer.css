@@ -1,0 +1,46 @@
+.m-body {
+  background-color: white;
+  padding: 1rem;
+  padding-bottom: 6rem;
+}
+
+.m-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-image {
+  width: 100%;
+}
+
+.m-icon > img {
+  width: 7vmin;
+}
+
+.track-info {
+  text-align: center;
+  padding: 1rem;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* .media-controls > time:nth-of-type(1) {
+  display: block;
+} */
+
+.media-controls > button {
+  display: block;
+}
+
+.media-controls > input {
+  display: block;
+}

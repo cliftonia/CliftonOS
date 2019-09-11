@@ -1,20 +1,28 @@
 import React from "react";
 import AboutModal from "./AboutModal";
 import "./reset.css";
+import "./Normalize.css";
 import "./App.css";
 import ThemeModal from "./ThemeModal";
 import Fullscreen from "react-full-screen";
+import Games from "./Games";
+import MusicPlayer from "./MusicPlayer";
+import Socials from "./Socials";
+import Clock from "./Clock";
+import CrudApps from "./CrudApps";
+import Readme from "./Readme";
 
 class App extends React.Component {
   state = {
     themes: [
-      { color: "blue", clicked: false },
-      { color: "green", clicked: false },
-      { color: "yellow", clicked: true },
-      { color: "mistyrose", clicked: false }
+      { Url: "Honeycomb.png", clicked: false, name: "Honeycomb" },
+      { Url: "PurpleParadise.png", clicked: false, name: "Purple Paradise" },
+      { Url: "redbrick.png", clicked: true, name: "Red Brick" },
+      { Url: "Goldheavon.png", clicked: false, name: "Gold Dream" }
     ],
     isFull: false,
-    bgColor: "blue"
+    bgColor: "green",
+    bgUrl: "redbrick.png"
   };
 
   goFull = () => {
@@ -34,19 +42,30 @@ class App extends React.Component {
     this.setState({ themes });
   };
 
+  handleFontColor = () => {
+    if (this.state.bgUrl === "Honeycomb.png") {
+      return { color: "black" };
+    } else {
+      return { color: "white" };
+    }
+  };
+
   handleButton = () => {
     console.log("hey");
     var array = this.state.themes.filter(theme => theme.clicked === true);
-    var color = array[0].color;
+    var Url = array[0].Url;
 
     this.setState({
-      bgColor: color
+      bgUrl: Url
     });
   };
 
   render() {
     return (
-      <div className="App" style={{ backgroundColor: `${this.state.bgColor}` }}>
+      <div
+        className="App"
+        style={{ backgroundImage: `url(${this.state.bgUrl})` }}
+      >
         <div className="header">
           <div className="left-area">
             <AboutModal />
@@ -61,16 +80,30 @@ class App extends React.Component {
             <Fullscreen
               enabled={this.state.isFull}
               onChange={isFull => this.setState({ isFull })}
-            >
-              <div className="full-screenable-node"></div>
-            </Fullscreen>
-            <p className="timer">11:38</p>
+            ></Fullscreen>
+            <Clock />
           </div>
         </div>
-        <div className="m-icon">
-          <img src="music-player-icon.png" alt="" />
-          <p>Cliff tunes</p>
-        </div>
+        <Games
+          handleFontColor={this.handleFontColor}
+          themes={this.state.themes}
+        />
+        <Socials
+          handleFontColor={this.handleFontColor}
+          themes={this.state.themes}
+        />
+        <MusicPlayer
+          handleFontColor={this.handleFontColor}
+          themes={this.state.themes}
+        />
+        <CrudApps
+          handleFontColor={this.handleFontColor}
+          themes={this.state.themes}
+        />
+        <Readme
+          handleFontColor={this.handleFontColor}
+          themes={this.state.themes}
+        />
       </div>
     );
   }

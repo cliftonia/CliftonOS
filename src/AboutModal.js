@@ -15,7 +15,7 @@ class Modal extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>about</button>
+        <button onClick={this.openModal}>About</button>
         <ReactModal
           initWidth={400}
           initHeight={400}
@@ -26,12 +26,11 @@ class Modal extends React.Component {
             <button onClick={this.closeModal}>X</button>
             <h3>About</h3>
           </div>
+          <img src="clifton.gif" alt="" />
           <div className="about-body">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reprehenderit ipsam illum a aliquid eos veritatis necessitatibus
-              quis eligendi rem debitis ipsa quidem, architecto, harum veniam
-              nam ex ullam repellendus obcaecati!
+              Welcome to my portfolio page, feel free to explore the
+              applications that I have created.
             </p>
           </div>
         </ReactModal>

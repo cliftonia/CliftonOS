@@ -31,7 +31,11 @@ class ThemeModal extends React.Component {
               <h3>Themes</h3>
             </div>
             <div className="t-body">
-              <img src="./201B40_00H-IMS-en_SG.jpg" alt="" />
+              <img
+                className="theme-image"
+                src="./201B40_00H-IMS-en_SG.jpg"
+                alt=""
+              />
               <p>choose desktop theme</p>
             </div>
             <div className="t-i-b-w">
@@ -41,7 +45,7 @@ class ThemeModal extends React.Component {
                     onClick={() => this.props.highlight(index)}
                     className={theme.clicked ? `unselected-selected` : ``}
                   >
-                    {theme.color}
+                    {theme.name}
                   </p>
                 ))}
               </div>

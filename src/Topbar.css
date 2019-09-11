@@ -83,3 +83,21 @@ button {
 .timer {
   border-left: 1px solid black;
 }
+
+.theme-image {
+  position: relative;
+}
+
+.sqaure-overlay {
+  position: absolute;
+  height: 12vmin;
+  width: 16.2vmin;
+  background-color: aqua;
+  bottom: 24.6vmin;
+  right: 13.2vmin;
+}
+
+.about-body {
+  background-color: white;
+  border-top: black solid 1px;
+}
