@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "../App.css";
 import ReactModal from "react-modal-resizable-draggable";
 import axios from "axios";
 
@@ -94,7 +94,7 @@ class CrudApps extends React.Component {
         <div className="g-wrapper">
           <div className="p-icon" onClick={this.openModal}>
             <img src="/images/paint.png" alt="" />
-            <p style={this.props.handleFontColor()}>Cliff Paint</p>
+            <p style={this.props.handleFontColor()}>Clif Paint</p>
           </div>
           <ReactModal
             initWidth={671}
@@ -125,7 +125,7 @@ class CrudApps extends React.Component {
                         type="text"
                       />
                       <button onClick={this.handleBackground}>
-                        set background
+                        Pick a movie
                       </button>
                     </form>
                   </div>

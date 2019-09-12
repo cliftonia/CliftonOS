@@ -1,5 +1,5 @@
 import React from "react";
-import "./Readme.css";
+import "../css/Socials.css";
 import ReactModal from "react-modal-resizable-draggable";
 
 class Socials extends React.Component {
@@ -16,8 +16,8 @@ class Socials extends React.Component {
       <div>
         <div className="g-wrapper">
           <div className="m-icon" onClick={this.openModal}>
-            <img src="/images/notepad.png" alt="" />
-            <p style={this.props.handleFontColor()}>Readme.txt</p>
+            <img src="/images/foldericon.jpg" alt="" />
+            <p style={this.props.handleFontColor()}>Socials</p>
           </div>
           <ReactModal
             initWidth={400}
@@ -31,7 +31,26 @@ class Socials extends React.Component {
                 <h3>Socials</h3>
               </div>
               <div className="modal-body">
-                <h1>Hello</h1>
+                <div className="s-icons">
+                  <a
+                    href="https://github.com/cliftonia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/images/github.jpg" alt="" />
+                    <p>Github</p>
+                  </a>
+                </div>
+                <div className="s-icons">
+                  <a
+                    href="https://www.linkedin.com/in/cliftonbaggerman/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/images/linkedin.jpg" alt="" />
+                    <p>LinkedIn</p>
+                  </a>
+                </div>
               </div>
             </div>
           </ReactModal>

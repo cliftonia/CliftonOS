@@ -1,18 +1,18 @@
 import React from "react";
-import AboutModal from "./AboutModal";
-import "./reset.css";
-import "./Normalize.css";
+import AboutModal from "./Components/AboutModal";
+import "./css/reset.css";
+import "./css/Normalize.css";
 import "./App.css";
-import ThemeModal from "./ThemeModal";
+import ThemeModal from "./Components/ThemeModal";
 import Fullscreen from "react-full-screen";
-import Games from "./Games";
-import MusicPlayer from "./MusicPlayer";
-import Socials from "./Socials";
-import Clock from "./Clock";
-import CrudApps from "./CrudApps";
-import Readme from "./Readme";
-import Email from "./Email";
-import PixelArt from "./PixelArt";
+import Games from "./Components/Games";
+import MusicPlayer from "./Components/MusicPlayer";
+import Socials from "./Components/Socials";
+import Clock from "./Components/Clock";
+import CrudApps from "./Components/CrudApps";
+import Readme from "./Components/Readme";
+import Email from "./Components/Email";
+import PixelArt from "./Components/PixelArt";
 
 class App extends React.Component {
   state = {
@@ -37,7 +37,6 @@ class App extends React.Component {
   };
 
   handleClick = index => {
-    console.log(index);
     var themes = this.state.themes.map((theme, i) => {
       if (index === i) {
         return { ...theme, clicked: true };
@@ -50,10 +49,8 @@ class App extends React.Component {
   };
 
   handleFontColor = () => {
-    if (
-      this.state.bgUrl === "/images/Honeycomb.png" ||
-      this.state.bgUrl === "/images/clifton.gif"
-    ) {
+    const { bgUrl } = this.state;
+    if (bgUrl === "/images/Honeycomb.png" || bgUrl === "/images/clifton.gif") {
       return { color: "black" };
     } else {
       return { color: "white" };
@@ -70,6 +67,14 @@ class App extends React.Component {
     });
   };
 
+  backgroundSize = () => {
+    if (this.state.bgUrl === "/images/clifton.gif") {
+      return "cover";
+    } else {
+      return "";
+    }
+  };
+
   render() {
     return (
       <Fullscreen
@@ -80,7 +85,7 @@ class App extends React.Component {
           className="App"
           style={{
             backgroundImage: `url(${this.state.bgUrl})`,
-            backgroundSize: "cover"
+            backgroundSize: `${this.backgroundSize()}`
           }}
         >
           <div className="header">

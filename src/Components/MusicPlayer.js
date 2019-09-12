@@ -1,5 +1,5 @@
 import React from "react";
-import "./MusicPlayer.css";
+import "../css/MusicPlayer.css";
 import ReactModal from "react-modal-resizable-draggable";
 import MediaPlayer from "./MediaPlayer";
 import ReactPlayer from "react-player";
@@ -30,7 +30,7 @@ class MusicPlayer2 extends React.Component {
           <div className="modal-wrapper">
             <div className="a-header">
               <button onClick={this.closeModal}>X</button>
-              <h3>MusicPlayer</h3>
+              <h3>Clif Tunes</h3>
             </div>
             <div className="modal-body">
               <ReactPlayer

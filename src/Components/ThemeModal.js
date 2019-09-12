@@ -1,5 +1,5 @@
 import React from "react";
-import "./Topbar.css";
+import "../css/Topbar.css";
 import ReactModal from "react-modal-resizable-draggable";
 
 class ThemeModal extends React.Component {
@@ -42,6 +42,7 @@ class ThemeModal extends React.Component {
             <div className="t-inner-body">
               {this.props.themes.map((theme, index) => (
                 <p
+                  key={index}
                   onClick={() => this.props.highlight(index)}
                   className={theme.clicked ? `unselected-selected` : ``}
                 >

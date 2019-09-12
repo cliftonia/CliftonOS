@@ -1,8 +1,8 @@
 import React from "react";
-import "./Games.css";
+import "../css/CrudApps.css";
 import ReactModal from "react-modal-resizable-draggable";
 
-class Games extends React.Component {
+class CrudApps extends React.Component {
   state = { aboutIsOpen: false, themeIsOpen: false };
 
   openModal = () => {
@@ -17,12 +17,8 @@ class Games extends React.Component {
       <div>
         <div className="g-wrapper">
           <div className="m-icon" onClick={this.openModal}>
-            <img
-              id="g-image-icon"
-              src="/images/snes-controller-pixel-art-maker-85601.png"
-              alt=""
-            />
-            <p style={this.props.handleFontColor()}>Games</p>
+            <img src="/images/CrudApps.png" alt="" />
+            <p style={this.props.handleFontColor()}>Crud Apps</p>
           </div>
           <ReactModal
             initWidth={400}
@@ -33,17 +29,31 @@ class Games extends React.Component {
             <div className="modal-wrapper">
               <div className="a-header">
                 <button onClick={this.closeModal}>X</button>
-                <h3>Games</h3>
+                <h3>Crud Apps</h3>
               </div>
               <div className="modal-body">
-                <div className="g-icons">
+                <div className="c-icons">
                   <a
-                    href="https://cliftonia.github.io/Tic-Tac-Toe/"
+                    href="https://produce-ex.herokuapp.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="g-img" src="/images/tictactoe.png" alt="" />
-                    <p>Tic Tac Toe</p>
+                    <img
+                      className="c-img"
+                      src="/images/strawberry.png"
+                      alt=""
+                    />
+                    <p>Produce Exchange</p>
+                  </a>
+                </div>
+                <div className="c-icons">
+                  <a
+                    href="https://whatsthat-webapp.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img className="c-img" src="/images/whatsthat.png" alt="" />
+                    <p>Whats That</p>
                   </a>
                 </div>
               </div>
@@ -55,4 +65,4 @@ class Games extends React.Component {
   }
 }
 
-export default Games;
+export default CrudApps;

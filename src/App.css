@@ -246,7 +246,7 @@ body {
 
 .movie-form {
   text-align: center;
-  margin-left: 2em;
+  margin-left: 0.4em;
 }
 
 .color-form {
@@ -257,7 +257,7 @@ body {
 
 .p-icon {
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.4rem;
   width: 16vmin;
   text-align: center;
 }

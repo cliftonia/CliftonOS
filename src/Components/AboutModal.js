@@ -1,5 +1,5 @@
 import React from "react";
-import "./Topbar.css";
+import "../css/Topbar.css";
 import ReactModal from "react-modal-resizable-draggable";
 
 class Modal extends React.Component {
@@ -13,6 +13,7 @@ class Modal extends React.Component {
   };
 
   render() {
+    const { modalIsOpen } = this.state;
     return (
       <div>
         <button onClick={this.openModal}>About</button>
@@ -21,7 +22,7 @@ class Modal extends React.Component {
           initHeight={700}
           disableResize
           onRequestClose={this.closeModal}
-          isOpen={this.state.modalIsOpen}
+          isOpen={modalIsOpen}
         >
           <div className="modal-wrapper">
             <div className="a-header">
@@ -30,15 +31,17 @@ class Modal extends React.Component {
             </div>
             <img className="about-img" src="/images/clifton.gif" alt="" />
             <div className="modal-body">
+              <h1>Clifton OS</h1>
               <p>
-                Welcome to my portfolio page, feel free to explore the
-                applications that I have created.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                perspiciatis voluptates deleniti numquam veritatis. Dolorum,
-                illum impedit facere sed veritatis commodi aspernatur ipsa quod,
-                molestiae omnis ad culpa eum deserunt?
+                I am software engineer who is passionate about the tech space,
+                who enjoys solving problems. I believe what sets me apart is my
+                thirst for self-development as well the ability to work well
+                under pressure. I show honesty and transparency when it comes to
+                finding the right solutions. My experience in recruitment
+                specifically in the tech space shows a level of understanding of
+                what companies look for. I am a resilient and dependable
+                individual with an entrepreneurial spirit, who thinks outside
+                the box to enrich service experience.
               </p>
             </div>
           </div>

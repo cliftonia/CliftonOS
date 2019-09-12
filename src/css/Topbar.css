@@ -113,5 +113,7 @@ button:active {
 }
 
 .about-img {
-  padding: 1em;
+  max-width: 50%;
+  margin-left: 10em;
+  padding-top: 5%;
 }

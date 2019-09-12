@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./MediaPlayer.css";
+import "../css/MediaPlayer.css";
 import { Media, Player, controls } from "react-media-player";
 const { PlayPause, CurrentTime, Duration, Volume, autoPlay } = controls;
 
