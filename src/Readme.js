@@ -16,7 +16,7 @@ class Socials extends React.Component {
       <div>
         <div className="g-wrapper">
           <div className="m-icon" onClick={this.openModal}>
-            <img src="notepad.png" alt="" />
+            <img src="/images/notepad.png" alt="" />
             <p style={this.props.handleFontColor()}>Readme.txt</p>
           </div>
           <ReactModal

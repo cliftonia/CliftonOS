@@ -33,7 +33,7 @@ class ThemeModal extends React.Component {
           <div className="t-body">
             <img
               className="theme-image"
-              src="201B40_00H-IMS-en_SG.jpg"
+              src="/images/201B40_00H-IMS-en_SG.jpg"
               alt=""
             />
             <p>choose desktop theme</p>

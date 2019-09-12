@@ -6,7 +6,7 @@ export default function Email(props) {
     <div className="g-wrapper">
       <a href="mailto: clifton.baggerman@me.com">
         <div className="e-icon">
-          <img id="email-img" src="email.png" alt="" />
+          <img id="email-img" src="/images/email.png" alt="" />
           <p style={props.handleFontColor()}>Email</p>
         </div>
       </a>

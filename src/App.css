@@ -226,3 +226,42 @@ body {
 #email-img {
   width: 12vmin;
 }
+
+.app-main-ara {
+  display: flex;
+}
+
+.pixel {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.2em;
+}
+
+.movie-form {
+  text-align: center;
+  margin-left: 2em;
+}
+
+.color-form {
+  text-align: center;
+  margin-top: 1.5em;
+  margin-left: 0.1em;
+}
+
+.p-icon {
+  padding: 1rem;
+  margin: 1rem;
+  width: 16vmin;
+  text-align: center;
+}
+
+.p-icon:hover {
+  cursor: pointer;
+}

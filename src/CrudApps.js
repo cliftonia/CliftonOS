@@ -17,7 +17,7 @@ class CrudApps extends React.Component {
       <div>
         <div className="g-wrapper">
           <div className="m-icon" onClick={this.openModal}>
-            <img src="CrudApps.png" alt="" />
+            <img src="/images/CrudApps.png" alt="" />
             <p style={this.props.handleFontColor()}>Crud Apps</p>
           </div>
           <ReactModal
@@ -38,7 +38,11 @@ class CrudApps extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="c-img" src="strawberry.png" alt="" />
+                    <img
+                      className="c-img"
+                      src="/images/strawberry.png"
+                      alt=""
+                    />
                     <p>Produce Exchange</p>
                   </a>
                 </div>
@@ -48,7 +52,7 @@ class CrudApps extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="c-img" src="whatsthat.png" alt="" />
+                    <img className="c-img" src="/images/whatsthat.png" alt="" />
                     <p>Whats That</p>
                   </a>
                 </div>

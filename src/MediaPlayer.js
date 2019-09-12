@@ -10,7 +10,7 @@ class MediaPlayer extends Component {
         <Media>
           <div className="media">
             <div className="media-player">
-              <Player src="Cliftonia-whodis.mp3" />
+              <Player src="/Mp3/Cliftonia-whodis.mp3" />
             </div>
             <div className="media-controls">
               <PlayPause />

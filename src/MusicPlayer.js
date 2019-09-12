@@ -18,7 +18,7 @@ class MusicPlayer2 extends React.Component {
     return (
       <div className="m-player-wrapper">
         <div className="m-icon" onClick={this.openModal}>
-          <img src="com.tk.lolirem.vapormusic.png" alt="" />
+          <img src="/images/com.tk.lolirem.vapormusic.png" alt="" />
           <p style={this.props.handleFontColor()}>Clif Tunes</p>
         </div>
         <ReactModal

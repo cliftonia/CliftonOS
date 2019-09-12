@@ -16,7 +16,7 @@ class Socials extends React.Component {
       <div>
         <div className="g-wrapper">
           <div className="m-icon" onClick={this.openModal}>
-            <img src="foldericon.jpg" alt="" />
+            <img src="/images/foldericon.jpg" alt="" />
             <p style={this.props.handleFontColor()}>Socials</p>
           </div>
           <ReactModal
@@ -37,7 +37,7 @@ class Socials extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src="github.jpg" alt="" />
+                    <img src="/images/github.jpg" alt="" />
                     <p>Github</p>
                   </a>
                 </div>
@@ -47,7 +47,7 @@ class Socials extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src="linkedin.jpg" alt="" />
+                    <img src="/images/linkedin.jpg" alt="" />
                     <p>LinkedIn</p>
                   </a>
                 </div>

@@ -19,7 +19,7 @@ class Games extends React.Component {
           <div className="m-icon" onClick={this.openModal}>
             <img
               id="g-image-icon"
-              src="snes-controller-pixel-art-maker-85601.png"
+              src="/images/snes-controller-pixel-art-maker-85601.png"
               alt=""
             />
             <p style={this.props.handleFontColor()}>Games</p>
@@ -42,7 +42,7 @@ class Games extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="g-img" src="tictactoe.png" alt="" />
+                    <img className="g-img" src="/images/tictactoe.png" alt="" />
                     <p>Tic Tac Toe</p>
                   </a>
                 </div>

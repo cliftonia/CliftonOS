@@ -12,18 +12,24 @@ import Clock from "./Clock";
 import CrudApps from "./CrudApps";
 import Readme from "./Readme";
 import Email from "./Email";
+import PixelArt from "./PixelArt";
 
 class App extends React.Component {
   state = {
     themes: [
-      { Url: "Honeycomb.png", clicked: false, name: "Honeycomb" },
-      { Url: "PurpleParadise.png", clicked: false, name: "Purple Paradise" },
-      { Url: "redbrick.png", clicked: true, name: "Red Brick" },
-      { Url: "Goldheavon.png", clicked: false, name: "Gold Dream" }
+      { Url: "/images/Honeycomb.png", clicked: false, name: "Honeycomb" },
+      {
+        Url: "/images/PurpleParadise.png",
+        clicked: false,
+        name: "Purple Paradise"
+      },
+      { Url: "/images/redbrick.png", clicked: true, name: "Red Brick" },
+      { Url: "/images/Goldheavon.png", clicked: false, name: "Gold Dream" },
+      { Url: "/images/clifton.gif", clicked: false, name: "Clifton OS" }
     ],
     isFull: false,
     bgColor: "green",
-    bgUrl: "redbrick.png"
+    bgUrl: "/images/redbrick.png"
   };
 
   goFull = () => {
@@ -44,7 +50,10 @@ class App extends React.Component {
   };
 
   handleFontColor = () => {
-    if (this.state.bgUrl === "Honeycomb.png") {
+    if (
+      this.state.bgUrl === "/images/Honeycomb.png" ||
+      this.state.bgUrl === "/images/clifton.gif"
+    ) {
       return { color: "black" };
     } else {
       return { color: "white" };
@@ -69,7 +78,10 @@ class App extends React.Component {
       >
         <div
           className="App"
-          style={{ backgroundImage: `url(${this.state.bgUrl})` }}
+          style={{
+            backgroundImage: `url(${this.state.bgUrl})`,
+            backgroundSize: "cover"
+          }}
         >
           <div className="header">
             <div className="left-area">
@@ -91,30 +103,40 @@ class App extends React.Component {
               <Clock />
             </div>
           </div>
-          <Games
-            handleFontColor={this.handleFontColor}
-            themes={this.state.themes}
-          />
-          <Socials
-            handleFontColor={this.handleFontColor}
-            themes={this.state.themes}
-          />
-          <MusicPlayer
-            handleFontColor={this.handleFontColor}
-            themes={this.state.themes}
-          />
-          <CrudApps
-            handleFontColor={this.handleFontColor}
-            themes={this.state.themes}
-          />
-          <Readme
-            handleFontColor={this.handleFontColor}
-            themes={this.state.themes}
-          />
-          <Email
-            handleFontColor={this.handleFontColor}
-            themes={this.state.themes}
-          />
+          <div className="app-main-ara">
+            <div className="first-row">
+              <Games
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+              <Socials
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+              <MusicPlayer
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+              <CrudApps
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+              <Readme
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+              <Email
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+            </div>
+            <div className="second-row">
+              <PixelArt
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+            </div>
+          </div>
         </div>
       </Fullscreen>
     );

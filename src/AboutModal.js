@@ -28,7 +28,7 @@ class Modal extends React.Component {
               <button onClick={this.closeModal}>X</button>
               <h3>About</h3>
             </div>
-            <img className="about-img" src="clifton.gif" alt="" />
+            <img className="about-img" src="/images/clifton.gif" alt="" />
             <div className="modal-body">
               <p>
                 Welcome to my portfolio page, feel free to explore the
