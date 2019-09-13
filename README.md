@@ -1,6 +1,6 @@
 # Clifton OS
 
-Here is the link:
+Here is the link: http://cliftonos.surge.sh/
 
 ## App features:
 
@@ -25,15 +25,15 @@ Here is the link:
 
 I wanted to create an interesting portfolio page that could show all the projects that I have worked on.
 
-I decided to go for a look and feel of an 90' operating system, I did this by using old style fonts and icons.
-
-## Logic:
+I decided to go for a look and feel of a 90's operating system, I did this by using old style fonts and icons.
 
 ## Challenges & lessons learnt
 
-one of my biggest challanges was recreating the logic after working out that the way I was originally creating it was not ideal as it was blowing up to 500 lines of code.
+As this was my first React application my challanges was working with state and understanding how it works, especially when my previous application was about working with the dom.
+
+My other challanges faced when working with external custom components was styling them with CSS.
 
 ## Still to do...
 
 - create a double click feature for the icons
--
+- make it mobile responsive
