@@ -184,7 +184,7 @@ body {
 
 .modal-body {
   flex: 1;
-  overflow: hidden;
+  overflow: auto;
   margin-left: 5%;
   margin-right: 5%;
   background-color: white;
