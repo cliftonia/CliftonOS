@@ -53,6 +53,7 @@ class ThemeModal extends React.Component {
           </div>
           <div className="t-btn">
             <button onClick={this.props.changeBackground}>Apply</button>
+            <button onClick={this.props.flicker}>Flicker On/Off</button>
           </div>
         </ReactModal>
       </div>

@@ -78,7 +78,11 @@ button:active {
 }
 .t-btn > button {
   padding: 1em;
-  margin-left: 10em;
+}
+
+.t-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .unselected-selected {

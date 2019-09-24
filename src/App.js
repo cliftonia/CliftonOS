@@ -29,7 +29,8 @@ class App extends React.Component {
     ],
     isFull: false,
     bgColor: "green",
-    bgUrl: "/images/redbrick.png"
+    bgUrl: "/images/redbrick.png",
+    flicker: true
   };
 
   goFull = () => {
@@ -75,6 +76,26 @@ class App extends React.Component {
     }
   };
 
+  handleCrtClass = () => {
+    if (this.state.flicker === false) {
+      return "App";
+    } else {
+      return "App-CRT";
+    }
+  };
+
+  handleCrt = () => {
+    if (this.state.flicker === true) {
+      this.setState({
+        flicker: false
+      });
+    } else {
+      this.setState({
+        flicker: true
+      });
+    }
+  };
+
   render() {
     return (
       <Fullscreen
@@ -82,7 +103,7 @@ class App extends React.Component {
         onChange={isFull => this.setState({ isFull })}
       >
         <div
-          className="App"
+          className={this.handleCrtClass()}
           style={{
             backgroundImage: `url(${this.state.bgUrl})`,
             backgroundSize: `${this.backgroundSize()}`
@@ -95,6 +116,7 @@ class App extends React.Component {
                 highlight={this.handleClick}
                 themes={this.state.themes}
                 changeBackground={this.handleButton}
+                flicker={this.handleCrt}
               />
             </div>
             <div className="middle-area">
