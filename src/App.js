@@ -130,13 +130,13 @@ class App extends React.Component {
                 handleFontColor={this.handleFontColor}
                 themes={this.state.themes}
               />
-              <Email
-                handleFontColor={this.handleFontColor}
-                themes={this.state.themes}
-              />
             </div>
             <div className="second-row">
               <PixelArt
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+              <Email
                 handleFontColor={this.handleFontColor}
                 themes={this.state.themes}
               />
