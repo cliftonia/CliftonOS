@@ -269,3 +269,13 @@ body {
 .p-icon:hover {
   cursor: pointer;
 }
+
+.email-text {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .clifton-h1 {
+    display: none;
+  }
+}

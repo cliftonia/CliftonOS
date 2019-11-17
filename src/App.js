@@ -13,6 +13,7 @@ import CrudApps from "./Components/CrudApps";
 import Readme from "./Components/Readme";
 import Email from "./Components/Email";
 import PixelArt from "./Components/PixelArt";
+import ApiApps from "./Components/ApiApps";
 
 class App extends React.Component {
   state = {
@@ -29,7 +30,7 @@ class App extends React.Component {
     ],
     isFull: false,
     bgColor: "green",
-    bgUrl: "/images/redbrick.png",
+    bgUrl: "/images/clifton.gif",
     flicker: true
   };
 
@@ -120,7 +121,7 @@ class App extends React.Component {
               />
             </div>
             <div className="middle-area">
-              <h1>Clifton OS</h1>
+              <h1 className="clifton-h1">Clifton OS</h1>
             </div>
             <div className="right-area">
               <button className="fscreen-btn" onClick={this.goFull}>
@@ -155,6 +156,10 @@ class App extends React.Component {
             </div>
             <div className="second-row">
               <PixelArt
+                handleFontColor={this.handleFontColor}
+                themes={this.state.themes}
+              />
+              <ApiApps
                 handleFontColor={this.handleFontColor}
                 themes={this.state.themes}
               />
